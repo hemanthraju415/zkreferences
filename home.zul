@@ -1,0 +1,18 @@
+<?page title="pennaps" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+	<borderlayout hflex="1" vflex="1">
+		<north height="150px" border="normal">
+			<include src="/banner.zul" />
+		</north>
+		<west width="100px" border="normal" collapsible="true" splittable="true">
+			<include src="/sidebar.zul" />
+		</west>
+		<center id="mainContent" autoscroll="true">
+			<include src="/main.zul"/>
+		</center>
+		<south height="50px" border="normal">
+			<include src="footer.zul" />
+		</south>
+	</borderlayout>
+</zk>
