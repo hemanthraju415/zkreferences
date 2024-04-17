@@ -1,0 +1,47 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<grid>
+	<columns>
+		<column label="Type" width="120px" />
+		<column label="Content" />
+	</columns>
+	<rows>
+		<row>
+			<label value="Name" width="150px" />
+			<hlayout>
+				<textbox width="150px" tabindex="1" />
+			</hlayout>
+
+		</row>
+		<row>
+			Age:
+			<cell>
+				<intbox width="150px" tabindex="4" />
+			</cell>
+
+		</row>
+		<row>
+			Phone:
+			<textbox constraint="no empty" width="150px" maxlength="10" tabindex="5" />
+		</row>
+		<row>
+			Birthday:
+			<hlayout valign="middle">
+				<datebox width="150px" tabindex="7" />
+			</hlayout>
+		</row>
+		<row>
+			E-mail:
+			<cell>
+				<textbox width="150px" tabindex="9" />
+
+			</cell>
+
+
+		</row>
+
+		<row>
+		<button label="apply"/>
+		</row>
+	</rows>
+</grid>

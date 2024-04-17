@@ -5,14 +5,30 @@
 		<north height="150px" border="normal">
 			<include src="/banner.zul" />
 		</north>
-		<west width="100px" border="normal" collapsible="true" splittable="true">
+		<west width="150px" border="normal" collapsible="true" splittable="true">
 			<include src="/sidebar.zul" />
 		</west>
 		<center id="mainContent" autoscroll="true">
-			<include src="/main.zul"/>
+			<include id="load" src="/main.zul" />
 		</center>
 		<south height="50px" border="normal">
 			<include src="footer.zul" />
 		</south>
 	</borderlayout>
+	<window id="win" title="apply loan" border="normal" visible="false" width="500px" closable="true">
+	<include id="form" src="form.zul"/>
+	</window>
+	<zscript>
+<![CDATA[
+	void display(String x) {
+		if (x.equals("icici")) {
+			load.setSrc("icici.zul");
+		} else if (x.equals("hdfc")) {
+			load.setSrc("hdfc.zul");
+		} else if (x.equals("sbi")) {
+			load.setSrc("sbi.zul");
+		}
+	}
+]]>
+</zscript>
 </zk>
